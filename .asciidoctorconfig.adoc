@@ -1,0 +1,11 @@
+// .asciidoctorconfig.adoc
+:experimental:
+// :myprojectbasedir: {asciidoctorconfigdir}
+:sectlinks:
+:sectanchors:
+:sectnums:
+:linkcss:
+// :stylesdir: {asciidoctorconfigdir}/.asciidoctor
+// :stylesheet: preview-stylesheet.css
+// :stylesdir: https://intellij-asciidoc-plugin.ahus1.de/docs/antora/css/
+// :stylesheet: preview.css

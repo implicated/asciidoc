@@ -1,0 +1,40 @@
+= Images
+:figure-caption!:
+
+== Block Image Macro
+
+.Use URL
+image::https://docs.asciidoctor.org/asciidoc/latest/macros/_images/sunset.jpg[sunset,209,105]
+
+.Use Relative Path
+image::brew_1.png[sunset,,222]
+
+== Inline Image Macro
+
+Click image:https://docs.asciidoctor.org/asciidoc/latest/macros/_images/play.png[] to get the party started.
+
+== Set Images Directory
+:imagesdir: ../.images
+
+.User image directory
+image::brew_1.png[sunset,,222]
+
+== https://docs.asciidoctor.org/asciidoc/latest/macros/image-position/[Position and Frame Image]
+
+Text below images.
+
+[.left]
+.Image A
+image::iMazing.png[A,888,180]
+
+Text below images.
+
+== Adjust Image Size
+
+image::https://docs.asciidoctor.org/asciidoc/latest/macros/_images/sunset.jpg[alt=Sunset,width=222,height=100]
+
+== Specify Image Format
+
+image::https://example.org/avatar
+
+image::https://example.org/avatar[format=svg]

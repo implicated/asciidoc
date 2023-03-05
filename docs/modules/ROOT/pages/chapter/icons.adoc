@@ -1,0 +1,101 @@
+= Icons
+:icons: image
+// :iconsdir: images$
+:icontype: svg
+
+image::note.svg[]
+
+== Mode
+
+[cols=",a,2a"]
+|===
+| Mode | Code | Example
+
+| Image (Default)
+|
+[source,asciidoc]
+----
+:icons: image
+----
+.2+|
+* {empty}
++
+[NOTE]
+====
+This `Image` Icon.
+====
+* icon:shield[rotate=90,flip=vertical] This `Font` Icon.
+
+| Font (Only `HTML`, user https://fontawesome.com/[Font Awesome])
+|
+[source,asciidoc]
+----
+:icons: font
+----
+
+| Icons Macro
+|
+[source,asciidoc]
+----
+icon:<target>[<attrlist>]
+----
+|
+* This `Icon Macro` Icon.
+** icon:note[note.svg,width=61] This `Image` Icon.
+** icon:heart[size=2x,role=red] This `Font` Icon.
+** icon:heart[fa fa-heart,2x,role=red] This `Font` Icon.
+
+|===
+
+== Icons Macro Attribute
+
+[cols=",a,a"]
+|===
+| Mode | Attribute | Example
+
+| Image
+|
+* Role
+* Title
+* Link
+* Window
+* [.red]*Alt*
+* [.red]*Width*
+|
+* icon:note[role=,title=svg]
+* icon:note[link=https://www.google.com,window=_blank]
+* icon:note[alt=alt,width=30]
+
+
+
+| Font
+|
+* Role
+* Title
+* Link
+* Window
+* [.red]*Size*
+* 1x (default), 2x, 3x, 4x, 5x, lg, fw
+* [.red]*Rotate*
+* [.red]*Flip*
+|
+* icon:tags[role=red,title=hello]
+* icon:download[link=https://rubygems.org/downloads/whizbang-1.0.0.gem, window=_blank]
+* icon:shield[]
+* icon:shield[2x]
+* icon:shield[fw]
+* icon:shield[rotate=90]
+* icon:shield[flip=vertical]
+
+|===
+
+
+[%hardbreaks]
+icon:bolt[fw] bolt
+
+icon:heart[fw] heart
+
+[TIP]
+====
+
+====

@@ -1,0 +1,529 @@
+= Table
+:toc!: left
+:example-caption!:
+
+[NOTE]
+====
+[cols="1,1m"]
+|===
+| Operator | Symbol
+
+| Factor
+| `<number>`
+
+| Span
+| `+` `.+`
+
+| Duplication
+| `*`
+
+| Horizontal
+| `<` `>` `^`
+
+| Vertical
+| `.<` `.>` `^`
+
+| Style
+| `a` `d` `e` `l` `h` `m` `s`
+|===
+
+[cols="^.^1m,1a"]
+|===
+| Attribute | Example
+
+| `cols`
+|
+[source,asciidoc]
+----
+[cols="<Horizontal><Vertical><Width><Style>"]
+----
+[source,asciidoc]
+----
+[cols="3*<Horizontal><Vertical><Style>"]
+----
+
+| `width`
+|
+| `options`
+|
+|===
+
+.Format
+
+.Cell Format
+* <factor><span or duplication ><horizontal alignment ><vertical alignment ><style >|<cell’s content>
+====
+
+== Base Table
+
+.Name
+|===
+| Header1 | Header2
+
+| Cell1
+| Cell2
+| Cell1
+| Cell2
+|===
+
+== Table Name
+
+Default format `{Table Label}{Table Name}`.
+`{Table Label}` default value is *Table 1.*
+
+=== Customize Table Label
+
+* All table
++
+[source,asciidoc]
+----
+:table-caption: Hello Table Name
+----
+* One table
++
+[caption=,title="{table-caption} {counter:table-number}"]
+.Table caption
+|===
+| Header1 | Header2
+
+| Cell1
+| Cell2
+|===
+
+=== Turn Off Table Label
+
+* All turn off.
++
+[source,asciidoc]
+----
+:table-caption!:
+----
+* Turn off one.
++
+[caption=]
+.Turn off table label
+|===
+| Header1 | Header2
+
+| Cell1
+| Cell2
+|===
+
+== Table Columns
+
+[cols="2,2*"]
+|===
+| Header1 | Header2 | Header2
+
+| Cell1
+| Cell2
+| Cell3
+|===
+
+=== Column width
+
+Default width is 1.
+
+=== Align Contents
+
+|===
+| Type | Symbols
+
+| Horizontal (left right center)
+| `<` `>` `^`
+
+| Vertical (top bottom center)
+| `.<` `.>` `.^`
+|===
+
+.{empty}
+====
+[cols="2,1,<.<1,1*>.>,^.^1"]
+|===
+| Default (Left-Top)  | Ref | Left-Top | Right-Bottom | Center-Center
+
+|default
+|There isn't a horizontal alignment operator on this column's specifier, so the column falls back to the default horizontal alignment.
+Content is left-aligned by default.
+| Test
+| Test
+| Test
+|===
+====
+
+=== https://docs.asciidoctor.org/asciidoc/latest/tables/format-column-content[Style]
+
+|===
+| Name | Code
+
+| Asciidoc
+| a
+
+| Default
+| d
+
+| Emphasis
+| e
+
+| Header
+| h
+
+| Literal
+| l
+
+| Monospace
+| m
+
+| Strong
+| s
+|===
+
+[cols="1a,d,e,h,l,m,s"]
+|===
+|Asciidoc | Default| Emphasis | Header | Literal | Monospace | Strong
+
+|
+* List 1
+* List 2
+|This column's content is default (`d`).
+|This column's content is italicized (`e`).
+|This column's content and borders are rendered using the table header (`h`) styles.
+|`>`
+|This column's content is rendered using a monospace font (m).
+|This column's content is bold (`s`).
+
+|
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+|`>`
+|`>`
+|`>`
+|`>`
+|`>`
+|`>`
+|===
+
+== Table Rows
+
+=== Header Row
+
+* Explicit
+** Shorthand
++
+[%header]
+|===
+| Header1 | Header2
+| Cell1
+| Cell2
+|===
+** Formal
++
+[options=header]
+|===
+| Header1 | Header2
+| Cell1
+| Cell2
+|===
+* Implicit
++
+|===
+| Header1 | Header2
+
+| Cell1
+| Cell2
+|===
+* Deactivate
++
+[%noheader]
+|===
+| Header1 | Header2
+
+| Cell1
+| Cell2
+|===
+
+=== Footer Row
+
+* Shorthand
++
+[%footer]
+|===
+| Header1 | Header2
+| Cell1
+| Cell2
+|===
+* Formal
++
+[options=footer]
+|===
+| Header1 | Header2
+| Cell1
+| Cell2
+|===
+
+=== Align Content
+
+.Example
+[cols="5*"]
+|===
+| Default (Left-Top)  | Ref | Left-Top | Right-Bottom | Center-Center
+
+|Default
+|There isn't a horizontal alignment operator on this column's specifier, so the column falls back to the default horizontal alignment.
+Content is left-aligned by default.
+<.<| Test
+>.>| Test
+^.^| Test
+
+|Default
+2+|There isn't a horizontal alignment operator on this column's specifier, so the column falls back to the default horizontal alignment.
+Content is left-aligned by default.
+2*>.>| Test
+| Hello
+|===
+
+=== Style
+
+*Override the column style.*
+
+[cols='l,,,,,,']
+|===
+|Asciidoc | Default| Emphasis | Header | Literal | Monospace | Strong
+
+a|
+* List 1
+* List 2
+d|This column's content is default (`d`).
+e|This column's content is italicized (`e`).
+h|This column's content and borders are rendered using the table header (`h`) styles.
+l|`>`
+m|This column's content is rendered using a monospace font (`m`).
+s|This column's content is bold (`s`).
+
+a|
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+2*m|`>`
+2+m|`>`
+m|`>`
+s|`>`
+|===
+
+=== Duplicate Cells
+
+.Format
+<duplication factor><duplication operator><horizontal alignment operator><vertical alignment operator><style operator>|<cell’s content>
+
+|===
+| Header1 | Header2
+
+2*| Cell1 `>`
+2*e| Cell2 `>`
+|===
+
+== Table Span
+
+.Format
+`<Columns Span><Rows Span>+`
+
+=== Span Columns
+
+|===
+| Header1 | Header2
+
+| Cell1
+| Cell2
+
+2+| Cell3
+|===
+
+=== Span Rows
+
+|===
+| Header1 | Header2
+
+| Cell1
+.2+| Cell2
+
+| Cell3
+|===
+
+=== Span Columns and Rows
+
+|===
+| Header1 | Header2 | Header3 | Header4
+
+| Cell1
+2.2+| Cell2
+| Cell3
+
+| Cell4
+| Cell5
+|===
+
+== Table Width
+
+.Default
+|===
+| Header1 | Header2
+
+| Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1
+| Cell2
+|===
+
+.Fixed
+[width=10]
+|===
+| Header1 | Header2
+
+| Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1
+| Cell2
+|===
+
+.auto width
+[%autowidth]
+|===
+| Header1 | Header2
+
+| Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1Cell1
+| Cell2
+|===
+
+.Mix
+[cols="25h,~,~"]
+|===
+|small |as big as the column needs to be |the rest
+|===
+
+== Table Borders
+
+|===
+| Frame | Grid
+
+| all (Default)
+| all (Default)
+
+| ends (Top and Bottom)
+| rows
+
+| sides (Left and Right)
+| cols
+
+| none
+| none
+|===
+
+.Example
+====
+[frame=all,grid=none]
+|===
+| HeaderCell1 | Header Cell 2
+
+| Row1Cell1
+| Row1Cell2
+
+| Row2Cell1
+| Row2Cell2
+|===
+====
+
+== Table Striping
+
+Need Light Theme.
+
+* none - no rows are shaded (default)
+* even - even rows are shaded
+* odd - odd rows are shaded
+* all - all rows are shaded
+* hover - the row under the mouse cursor is shaded (HTML only)
+
+[cols=2*,stripes=even]
+|===
+|A1
+|B1
+|A2
+|B2
+|A3
+|B3
+|===
+
+[stripes=odd]
+|===
+| HeaderCell1 | Header Cell 2
+
+| Row1Cell1
+| Row1Cell2
+
+| Row2Cell1
+| Row2Cell2
+
+| Row3Cell1
+| Row3Cell2
+|===
+
+== link:https://docs.asciidoctor.org/asciidoc/latest/tables/orientation/[Table Orientation]
+
+No effect.
+
+[%rotate]
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+
+[orientation=landscape]
+|===
+| HeaderCell1 | Header Cell 2
+
+| Row1Cell1
+| Row1Cell2
+
+| Row2Cell1
+| Row2Cell2
+|===
+
+== Table Nesting
+
+[cols=",a"]
+|===
+| HeaderCell1 | Header Cell 2
+
+| Row1Cell1
+|
+[cols=","]
+!===
+! HeaderCell1 ! Header Cell 2
+
+! Row1Cell1
+! Row1Cell2
+
+! Row2Cell1
+! Row2Cell2
+!===
+
+| Row2Cell1
+| Row2Cell2
+|===
+
+== Table Separator
+
+[float=right,format=csv,stripes=hover]
+|===
+HeaderCell1,Header Cell 2
+
+include::attachment$/table-contents.csv[]
+|===
+
+[%header,cols=","]
+,===
+include::attachment$/table-contents.csv[]
+,===

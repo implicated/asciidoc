@@ -1,0 +1,23 @@
+= Audio and Video
+
+== Audio
+
+.This is audio
+audio::../attachments/爱殇.mp3[]
+
+== Video
+
+== Youtube
+
+.出口日语
+video::wJLu_-bJDAw[youtube,list=PLynCeSdpMqxBipKl9EHnBzZFzBnGuB108]
+
+.三体
+video::YrLompD6e_k[youtube,800,450,list=PLMX26aiIvX5rFSYPXtcqda3tWd6pGVD5Q,lang=zh-CN]
+
+.Test
+video::RvRhUHTV_8k[youtube,playlist="_SvwdK_HibQ,SGqg_ZzThDU"]
+
+.Test
+video::nPER_vv2SyU[youtube,lang=zh-CN]
+

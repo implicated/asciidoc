@@ -1,0 +1,57 @@
+= Paragraphs
+:hardbreaks:
+
+This is the preamble.
+
+== Hard Line Breaks
+
+=== Inline Line
+
+Here's a sample AsciiDoc document:
+
+Here's a +
+sample AsciiDoc document:
+
+[%hardbreaks]
+Here's a
+sample AsciiDoc document:
+
+=== Global
+
+[source,asciidoc]
+----
+:hardbreaks:
+----
+
+== Preamble and Lead
+
+=== Preamble
+
+[source,asciidoc]
+----
+= 标题
+
+This is the preamble.
+
+== 另一个标题
+----
+
+=== Lead
+
+====
+Here's a general AsciiDoc text.
+
+[.lead]
+Here's a lead.
+====
+
+== Alignment
+
+[.text-center]
+center text
+
+[.text-left]
+left text
+
+[.text-right]
+right text

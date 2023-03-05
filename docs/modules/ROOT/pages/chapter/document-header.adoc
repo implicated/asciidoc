@@ -1,0 +1,5 @@
+= Document Header: One : Two
+
+== Reference the document title
+
+*{doctitle}* is this document title

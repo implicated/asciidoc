@@ -1,0 +1,174 @@
+= List
+:toc:
+
+== Unordered List
+
+.list 1
+* one
+** one-two
+* two
+* three
+
+
+// tag::tagname[]
+.list 2
+* one
+- one-two
+*** one-two-three
+* two
+* three
+// end::tagname[]
+
+//-
+
+* Level 1 list item
+
+.Markers Show
+* world
+** markdown
+*** svn
+**** 666
+***** github
+[square]
+* hello
+[none]
+** asciidoc
+[disc]
+*** git
+[circle]
+**** 888
+[bullet]
+***** gitlab
+
+== Ordered List
+
+[start=3]
+.This is list from 3 start
+. one
+. two
+.. one-two
+.. one-two
+. three
+
+[%reversed]
+[start=1]]
+.This is reversed list . one . two .. one-two .. one-two . three
+
+.Markers Show
+. world
+.. markdown
+... svn
+.... 666
+..... github
+[square]
+. hello
+[none]
+.. asciidoc
+[disc]
+... git
+[circle]
+.... 888
+[bullet]
+..... gitlab
+
+=== Same List
+
+.List1
+. Linux
+
+* Fedora
+* Ubuntu
+* Slackware
+
+. BSD
+
+* FreeBSD
+* NetBSD
+
+// -
+
+.Similar List1
+. Linux
+* Fedora
+* Ubuntu
+* Slackware
+. BSD
+* FreeBSD
+* NetBSD
+
+[#_check_list]
+== Check List
+
+=== Interactive
+
+[%interactive]
+* [*] Read
+* [ ] Write
+
+=== Static
+
+* [*] Read
+* [ ] Write
+
+== Separate List
+
+=== Use line comment
+
+. one
+. two
+
+//
+. three
+
+=== Use block attribute
+
+. one
+. two
+
+[]
+. three
+
+== Complex List
+
+=== Long Text
+
+* The document header in AsciiDoc is optional.
+If present, it must start with a document title.
+
+* Optional author and revision information lines immediately follow the document title.
+
+* The document header must be separated from the remainder of the document by one or more empty lines, and it cannot contain empty lines.
+
+=== List Continuation
+
+* hello asciidoc start
+* this title
++
+--
+----
+=== two level
+----
+
+NOTE: add a note
+--
+* hello asciidoc end
+* {empty}
++
+----
+above is empty text list and align(need +)
+----
+
+//
+
+[.Ancestor list continuation]
+* grandmother
+** mother
+*** son
+
+
++
+grandfather
+** father
+*** daughter
+* new grandmother
+

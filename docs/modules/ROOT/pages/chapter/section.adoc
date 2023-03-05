@@ -1,0 +1,56 @@
+= Section
+:sectlinks:
+:sectanchors:
+:sectnums:
+
+[abstract]
+== Section Level
+
+[source,asciidoc]
+.title
+----
+= Level 0 Document Title
+
+== Level 1 Section Title
+
+=== Level 2 Section Title
+
+==== Level 3 Section Title
+
+===== Level 4 Section Title
+
+====== Level 5 Section Title
+
+== Another Level 1 Section Title
+
+=== Another Level 2 Section Title
+
+==== Another Level 3 Section Title
+
+===== Another Level 4 Section Title
+
+====== Another Level 5 Section Title
+----
+
+== Activate Section Title Links
+
+[source,asciidoc]
+----
+:sectlinks:
+----
+
+== Add § to section titles
+
+[source,asciidoc]
+----
+:sectanchors:
+----
+
+== Section Number
+
+[source,asciidoc]
+----
+:sectnums:
+----
+
+== https://docs.asciidoctor.org/asciidoc/latest/sections/styles/[Special Section]

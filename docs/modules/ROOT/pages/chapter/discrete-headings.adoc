@@ -1,0 +1,29 @@
+= Discrete Headings
+
+== Discrete Headings
+
+[source,asciidoc]
+.Discrete Headings
+----
+[discrete]
+= title
+
+[discrete]
+== title
+
+[discrete]
+=== title
+
+[discrete]
+===== title
+----
+
+[discrete]
+== discrete title
+
+== title
+
+[discrete]
+== discrete title
+
+== title

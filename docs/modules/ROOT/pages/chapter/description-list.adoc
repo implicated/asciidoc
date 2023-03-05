@@ -1,0 +1,32 @@
+= Description List
+:icons: font
+
+[NOTE]
+====
+[]
+description:: 描述
+nested one;; 嵌套
+distribute:: 属性
+nested::: two
+dictionary:: 字典
+====
+
+== The available term delimiters
+
+The available term delimiters `::` `:::` `::::` `;;`
+
+== Horizontal List
+
+[horizontal]
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+
+== QA List
+
+[qanda]
+This is question?::
+This is answer.
+
+This is question?::
+This is answer.

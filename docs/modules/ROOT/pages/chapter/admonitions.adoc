@@ -1,0 +1,55 @@
+= icon:list[fw] Admonitions
+:icons: font
+
+== Paragraph
+
+====
+NOTE: This is note.
+
+TIP: This is tip.
+
+IMPORTANT: This is important.
+
+CAUTION: This is caution.
+
+WARNING: This is warning.
+====
+
+== Block
+
+====
+[IMPORTANT]
+.important
+=====
+ This is important block.
+
+. This is important block.
+. This is important block.
+. This is important block.
+=====
+====
+
+== Enable Icons
+
+[source,asciidoc]
+----
+:icons: font
+----
+
+== https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/[Using Emoji for Icons]
+
+[source,asciidoc]
+----
+:tip-caption: 💡
+----
+
+[source,asciidoc]
+----
+:tip-caption: pass:[&#128161;]
+----
+
+[TIP]
+It's possible to use Unicode glyphs as admonition icons.
+
+[TIP]
+It's possible to use Unicode glyphs as admonition icons.

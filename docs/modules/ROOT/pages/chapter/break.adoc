@@ -1,0 +1,23 @@
+= Break
+
+NOTE: Level 1 title self have break.
+
+== Line Break
+
+hello
+
+'''
+'''
+
+== Page Break(Only Print Mode)
+
+Page 2
+
+<<<
+
+Page 3
+
+=== Forced Break
+
+[%always]
+<<<

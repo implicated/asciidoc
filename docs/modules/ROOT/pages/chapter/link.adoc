@@ -1,0 +1,74 @@
+= Link
+:toc:
+:hide-uri-scheme:
+
+xref:attachment$1.txt[name]
+
+[NOTE]
+====
+* Link not `.adoc` file. `.adoc` file user xref:chapter/cross-reference.adoc[*Cross Reference*]
++
+[source,asciidoc]
+----
+link:file://resource/1.txt[name]
+xref:attachment$1.txt[name]
+----
+
+* Link hyperlinks.
++
+[source,asciidoc]
+----
+link:https://www.google.com[Google]
+
+link:ftp://www.google.com[Google]
+----
+====
+
+== Hide URL Schema
+
+Set `hide-uri-scheme` attribute in the header of document.
+
+https://www.implicated.cc
+
+== Encode
+
+[source,js]
+.open dev tools in browser
+----
+encodeURI('http://example.org?q=label:"Requires docs"')
+----
+
+== Autolink
+
+https://https.implicated.cc
+
+http://http.implicated.cc
+
+ftp://ftp.implicated.cc
+
+mailto:mail@implicated.cc
+
+=== Disable autolink
+
+Email us at hello@example.com to say hello.
+
+Email us at \hello@example.com to say hello.
+
+[subs=-macros]
+Email us at hello@example.com to say hello.
+
+== Link Macro
+
+Type "https://asciidoctor.org" into the location bar of your browser.
+
+Type "https://asciidoctor.org[]" into the location bar of your browser.
+
+Open "https://www.google.com[*_Google_*]" search
+
+Open "https://www.google.com[*_Google_*,role=teal]" search
+
+link:../.crates/iMazing.png[png^]
+
+link:../.crates/iMazing.png["This is png^"]
+
+link:../.crates/iMazing.png["This is png^",role=btn]

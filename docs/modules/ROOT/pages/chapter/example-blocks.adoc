@@ -1,0 +1,17 @@
+= Example Blocks
+:example-caption!:
+
+== Example Syntax
+
+.Optional title
+[example]
+This is an example of an example block.
+
+== Delimited Example Syntax
+
+.Onomatopoeia
+====
+The book hit the floor with a *thud*.
+
+He could hear doves *cooing* in the pine trees`' branches.
+====

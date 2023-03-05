@@ -1,0 +1,53 @@
+= TOC
+Kismet Lee; B. Steppenwolf; Pax Draeke
+:toc:
+:toc-title: Customize Title
+:toclevels: 5
+
+Write preamble.
+
+== Enable TOC
+
+[source,asciidoc]
+----
+:toc:
+----
+
+== Customize TOC Title
+
+[source,asciidoc]
+----
+:toc-title: You's title
+----
+
+== Customize TOC Depth
+
+By default, TOC display level 1(==) and level 2(===)
+
+[source,asciidoc]
+----
+:toclevels: 1 (default value=2)
+----
+
+toc::[]
+
+== Customize TOC Position
+
+[source,asciidoc]
+----
+:toc: left
+:toc: right
+:toc: preamble (need preamble)
+:toc: macro (need toc macro)
+:toc: auto (default)
+----
+
+== One
+
+=== Two
+
+==== Three
+
+===== Four
+
+====== Five

@@ -1,0 +1,20 @@
+= Button and Menu UI Macro
+
+== Button Macro
+
+Press the btn:[OK] button when you are finished.
+
+Select a file in the file navigator and click btn:[Open].
+
+== Menu UI Macro
+
+To save the file, select menu:File[Save].
+
+Select menu:View[Zoom > Reset] to reset the zoom level to the default setting.
+
+== Shorthand
+
+Select "File > New > File" to create file
+
+\"File > New > File"
+

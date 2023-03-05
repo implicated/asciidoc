@@ -1,0 +1,16 @@
+= Document Types
+
+== Types
+
+[source,asciidoc]
+----
+:doctype: manpage
+----
+
+* article (default)
+* book
+* manpage
+* inline
+
+
+

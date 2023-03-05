@@ -1,0 +1,79 @@
+= Cross Reference
+:xrefstyle: full
+
+[NOTE]
+====
+Link `.adoc` file.
+
+[source,asciidoc]
+----
+xref:../mac/Keyboard Workflow.adoc[]
+----
+
+====
+
+== Internal Cross Reference
+
+This Shorthand <<Anchor List>>
+
+This Shorthand and rename <<Anchor Link,new_name>>
+
+This Inline xref macro xref:_anchor_text[New name]
+
+== Natural Cross Reference
+
+The title must contain at least one space character or contain at least one uppercase letter.
+
+This is natural cross reference <<Natural Cross Reference>>,
+
+This is natural cross reference <<Natural>>,
+
+== Document to Document Cross Reference
+
+
+Ref to xref:chapter/list.adoc#_check_list[Check List] in __List.adoc__ for more information about __check list__.
+
+See the xref:chapter/list.adoc#_check_list[README].
+
+== Customize Prefix and Suffix
+
+We could also write the link as link:List{relfilesuffix}[README].
+
+[source]
+.suffix
+----
+ ifdef::env-name[:relfilesuffix: .adoc]
+----
+
+[source]
+.prefix
+----
+ :relfileprefix: ../
+ :relfilesuffix: /
+----
+
+== https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/[Cross Reference Text and Style]
+
+xref:chapter/list.adoc#_check_list[xrefstyle=full]
+
+xref:chapter/list.adoc#_check_list[xrefstyle=short]
+
+xref:chapter/list.adoc#_check_list[xrefstyle=basic]
+
+== Test Demo
+
+== Anchor List
+
+This is Anchor List.
+
+== Anchor Link
+
+This is Anchor Link.
+
+[#_anchor_text]
+== Anchor Text [Modify]
+
+This is Anchor Text.
+Ref name not is *Anchor Text [Modify]*
+
+== Natural

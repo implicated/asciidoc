@@ -1,0 +1,39 @@
+= https://docs.asciidoctor.org/asciidoc/latest/docinfo/[Docinfo File]
+
+Docinfo is a feature of AsciiDoc that allows you to insert custom content into the *head*, *header*, or *footer* of the output document.
+
+== Enable docinfo
+
+
+|===
+| Value | Remark
+
+| private
+| `private-head` `private-header` `private-footer`
+
+| private-head
+|
+
+| private-header
+|
+
+| private-footer
+|
+
+| shared
+| `shared-head` `shared-header` `shared-footer`
+
+| shared-head
+|
+
+| shared-header
+|
+
+| shared-footer
+|
+
+|===
+[source,asciidoc]
+----
+:docinfo: shared,private-footer
+----

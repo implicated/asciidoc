@@ -1,0 +1,98 @@
+= Verbatim and Source Blocks
+:icons: font
+
+== Source
+
+=== Block Source
+
+[source,xml,linenums]
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+This is normal content.
+
+=== Implied Block Source
+
+[,json]
+----
+{
+"id": 1,
+"name": "hello"
+}
+----
+
+=== Include Directive
+
+[source,py,linenums,highlight=2..3]
+----
+include::example$/1.py[]
+----
+
+[source,console,linenums]
+$ asciidoctor -v
+
+== Source Highlighting
+
+=== Enable Global Highlight
+
+[source,asciidoc]
+----
+:source-language: py
+----
+
+=== Listing Block
+
+* User `[listing]`
++
+[listing]
+This is an example of a paragraph assigned the `listing` style in an attribute list.
+Notice that the monospace marks are preserved in the output.
+* User Indent
++
+    This is an example of a paragraph assigned the `listing` style in an attribute list.
+    Notice that the monospace marks are preserved in the output.
+
+* User Delimited `----`
++
+----
+This is an example of a paragraph assigned the `listing` style in an attribute list.
+Notice that the monospace marks are preserved in the output.
+----
+
+=== Literal Block
+
+* User `[literal]`
++
+[literal]
+error: 1954 Forbidden search.
+absolutely fatal: operation lost in the dodecahedron of doom.
+Would you like to try again? y/n
+
+* User Indent
++
+    error: 1954 Forbidden search
+    absolutely fatal: operation lost in the dodecahedron of doom
+    Would you like to try again? y/n
+
+* User Delimited `\....`
++
+....
+error: 1954 Forbidden search
+absolutely fatal: operation lost in the dodecahedron of doom
+Would you like to try again? y/n
+....
+
+== Verbatim
+
+[source,ruby]
+----
+require 'sinatra' <1>
+
+get '/hi' do <2> <3>
+  "Hello World!"
+end
+----
+
+<1> Library import
+<2> URL mapping
+<3> Response block

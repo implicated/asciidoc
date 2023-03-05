@@ -1,0 +1,12 @@
+= icon:circle[fw] Equations and Formulas (STEM)
+:icons: font
+
+== What is STEM?
+
+Science, Technology, Engineering and Math expressions
+
+== https://en.wikibooks.org/wiki/LaTeX[Starting]
+
+stem:[sqrt(4) = 2]
+
+stem:[cos (2theta) = cos^2 theta - sin^2 theta]
